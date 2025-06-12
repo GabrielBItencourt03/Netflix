@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Jogos</title>
+</head>
+<body>
+    <h2>Cadastro de Jogos</h2>
+    <form id="formJogos">
+     <label for="nomeJogo">Nome do Jogo:</label>
+     <input type="text" id="titulo" name="titulo" required>
+     <br>
+     <br>
+     <label for="anoLancamento">Ano de Lançamento:</label>
+     <input type="number" id="ano" name="ano" required>
+     <br>
+     <br>
+     <label for="plataforma">Plataforma:</label>
+     <select name="plataforma" id="plataforma">
+        <option value="">Selecione...</option>
+        <option value="PC">PC</option>
+        <option value="Console">Console</option>
+        <option value="Mobile">Mobile</option>
+        <option value="Outro">Outro</option>
+     </select>
+     <br>
+     <br>
+     <label for="generoJogo">Genero do Jogo:</label>
+     <select name="generoJogo" id="generoJogo">
+        <option value="">Selecione...</option>
+        <option value="Ação">Ação</option>
+        <option value="Esporte">Esporte</option>
+        <option value="Estratégia">Estratégia</option>
+        <option value="Puzzle">Puzzle</option>
+        <option value="RPG">RPG</option>
+        <option value="Outro">Outro</option>
+     </select>
+     <br>
+     <br>
+     <button type="submit">Cadastrar Jogos</button>
+    </form>
+    <!--Aqui mostraremos a lista de jogos cadastrados-->
+    <h3>Jogos Cadastrados</h3>
+    <ul id="listaJogos"></ul>
+    <script src="formCadastroJogos.js"> </script>
+</body>
+</html>

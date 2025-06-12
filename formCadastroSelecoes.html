@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Seleções da Copa de 2026</title>
+</head>
+<body>
+    <h2>Seleções da Copa do Mundo de 2026</h2>
+    <form id="formSelecoes"></form>
+    <label for="nomeSelecoes">Nome da Seleção:</label>
+    <input type="text" id="selecoes" name="selecoes" required>
+    <br>
+    <br>
+    <label for="continente">Continente:</label>
+    <select name="continente" id="continente">
+        <option value="">Selecione...</option>
+        <option value="América">América</option>
+        <option value="Europa">Europa</option>
+        <option value="África">África</option>
+        <option value="Ásia">Ásia</option>
+        <option value="Ocenia">Ocenia</option>
+    </select>
+    <br>
+    <br>
+    <label for="numerosTitulos">Números de Titulos:</label>
+    <input type="number" id="numerosTitulos" name="numerosTitulos" required>
+    <br>
+    <br>
+    <label for="jogadorDestaque">Jogador destaque da seleção:</label>
+    <input type="text" id="jogadorDestaque" name="jogadorDestaque" required>
+    <br>
+    <br>
+    <button type="submit">Cadastrar Seleção</button>
+    </form>
+    <h3>Seleção cadastrada</h3>
+    <ul id="listaSelecao"></ul>
+    <script src="formCadastroSelecao.js"></script>
+</body>
+</html>
