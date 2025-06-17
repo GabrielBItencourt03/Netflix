@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+</head>
+<body>
+    <h1>Se-Cadastre</h1>
+    <form id="formParticipante">
+        <label for="nomeCompleto">Nome completo:</label>
+        <input type="text" name="nomeCompleto" id="nomeCompleto" required>
+        <br>
+        <label for="idade">Idade:</label>
+        <input type="number" name="idade" id="idade" required>
+        <br>
+        <label>Gênero:</label>
+        <input type="radio" name="genero" id="masculino" value="Masculino" required>
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="genero" id="feminino" value="Feminino">
+        <label for="feminino">Feminino</label>
+        <input type="radio" name="genero" id="outro" value="Outro">
+        <label for="outro">Outro</label>
+        <br>
+        <label for="evento">Evento que deseja participar:</label>
+        <select name="evento" id="evento" required>
+            <option value="">Selecione...</option>
+            <option value="Evento A">Evento A</option>
+            <option value="Evento B">Evento B</option>
+            <option value="Evento C">Evento C</option>
+        </select>
+        <br>
+        <input type="checkbox" name="aceitoRegulamento" id="aceitoRegulamento" required>
+        <label for="aceitoRegulamento">Aceito o regulamento</label>
+        <br>
+        <button type="submit">Cadastrar Participante</button>
+    </form>
+    <h3>Lista de Participantes</h3>
+    <ul id="listaParticipantes"></ul>
+</body>
+</html>

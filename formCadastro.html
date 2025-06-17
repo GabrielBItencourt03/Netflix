@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fórmulario de Cadastro</title>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Sócio Torcedor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <form id="cadastro">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
-        <br>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <br>
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha"  name="senha" required>
-        <br>
-        <br>
-        <label for="cpf">Cpf:</label>
-        <input type="tel" id="cpf" name="cpf required">
-        <br>
-        <br>
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" required>
-        <br>
-        <br>
-        <label for="dataNascimento">Data de Nascimento</label>
-        <input type="date" id="nascimento" name="nascimento" required>
-        <button type="submit">Enviar</button>
+<body class="bg-white text-black min-h-screen flex items-center justify-center font-sans">
+  <div class="w-full max-w-md p-8 border border-black rounded-md shadow-md">
+    <div class="text-center mb-6">
+      <h2 class="text-xl font-bold uppercase tracking-wide">Cadastro Sócio Torcedor</h2>
+    </div>
+
+    <form id="cadastro" class="space-y-4">
+      <input type="text" id="nome" name="nome" placeholder="Nome" required class="w-full border border-black px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-black"/>
+      <input type="email" id="email" name="email" placeholder="Email" required class="w-full border border-black px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-black"/>
+      <input type="password" id="senha" name="senha" placeholder="Senha" required class="w-full border border-black px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-black"/>
+      <input type="tel" id="cpf" name="cpf" placeholder="CPF" required class="w-full border border-black px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-black"/>
+      <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required class="w-full border border-black px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-black"/>
+      <input type="date" id="nascimento" name="nascimento" required class="w-full border border-black px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-black"/>
+      <button type="submit" class="w-full bg-black text-white py-2 font-semibold rounded hover:bg-white hover:text-black hover:border-black transition">Enviar</button>
     </form>
-    <!--Mostrar resultado-->
-    <div id="resultado"></div>
-    <script src="formCadastro.js"></script>
-</body> 
+
+    <div id="resultado" class="mt-4 text-center text-sm text-gray-600"></div>
+  </div>
+</body>
 </html>

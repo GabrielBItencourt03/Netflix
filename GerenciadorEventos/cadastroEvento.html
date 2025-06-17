@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Casdastre o Evento</h1>
+    <form id="formEvento">
+    <label for="nome">Nome do Evento:</label>
+    <input type="text" name="nome" id="nome" required>
+    <br>
+    <label for="data">Data do Evento:</label>
+    <input type="date" name="data" id="data" required>
+    <br>
+    <label for="modalidade">Modalidade do Evento:</label>
+    <select name="modalidade" id="modalidade">
+        <option value="">Selecione...</option>
+        <option value="Futebol">Futebol</option>
+        <option value="Basquete">Basquete</option>
+        <option value="Vôlei">Vôlei</option>
+        <option value="Atletismo">Atletismo</option>
+        <option value="Outro">Outro</option>
+    </select>
+    <br>
+    <label form="local">Local do Evento:</label>
+    <input type="text" name="local" id="local" required>
+    <br>
+    <label for="eventoAberto">Evento aberto para público?</label>
+    <input type="checkbox" name="eventoAberto" id="eventoAberto">
+    <br>
+    <button type="submit">Cadastrar Evento</button>
+</form>
+    <h3>Eventos Cadastrados</h3>
+    <ul id="listaEventos"></ul>
+    <script src="formCadastroEvento.js"></script>
+</body>
+</html>

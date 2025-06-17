@@ -9,7 +9,7 @@ form.addEventListener("submit", function(evento) {
     const numeroTitulos = document.getElementById("numeroTitulos").value;
     const jogadorDestaque = document.getElementById("jogadorDestaque").value;
     const novaSelecao = document.createElement("li");
-    novaSelecao.innerText = `${nomeSelecoes} -- ${continente}} -- ${numeroTitulos} -- ${jogadorDestaque}`;
+    novaSelecao.innerText = `${nomeSelecoes} -- ${continente} -- ${numeroTitulos} -- ${jogadorDestaque}`;
     listaSelecao.appendChild(novaSelecao);
     form.reset();
 });
