@@ -4,38 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Se-Cadastre</h1>
-    <form id="formParticipante">
-        <label for="nomeCompleto">Nome completo:</label>
-        <input type="text" name="nomeCompleto" id="nomeCompleto" required>
-        <br>
-        <label for="idade">Idade:</label>
-        <input type="number" name="idade" id="idade" required>
-        <br>
-        <label>Gênero:</label>
-        <input type="radio" name="genero" id="masculino" value="Masculino" required>
-        <label for="masculino">Masculino</label>
-        <input type="radio" name="genero" id="feminino" value="Feminino">
-        <label for="feminino">Feminino</label>
-        <input type="radio" name="genero" id="outro" value="Outro">
-        <label for="outro">Outro</label>
-        <br>
-        <label for="evento">Evento que deseja participar:</label>
-        <select name="evento" id="evento" required>
-            <option value="">Selecione...</option>
-            <option value="Evento A">Evento A</option>
-            <option value="Evento B">Evento B</option>
-            <option value="Evento C">Evento C</option>
-        </select>
-        <br>
-        <input type="checkbox" name="aceitoRegulamento" id="aceitoRegulamento" required>
-        <label for="aceitoRegulamento">Aceito o regulamento</label>
-        <br>
-        <button type="submit">Cadastrar Participante</button>
-    </form>
-    <h3>Lista de Participantes</h3>
-    <ul id="listaParticipantes"></ul>
+<body class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white min-h-screen flex items-center justify-center font-sans">
+    <div class="w-full max-w-lg p-8 bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-blur-md">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-extrabold uppercase tracking-widest">Se-Cadastre</h1>
+            <p class="text-sm text-gray-200 mt-2">Preencha o formulário para participar de nossos eventos</p>
+        </div>
+        <form id="formParticipante" class="space-y-4">
+            <div>
+                <label for="nomeCompleto" class="block text-sm font-medium">Nome completo:</label>
+                <input type="text" name="nomeCompleto" id="nomeCompleto" required class="w-full mt-1 p-2 rounded-lg bg-gray-100 text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label for="idade" class="block text-sm font-medium">Idade:</label>
+                <input type="number" name="idade" id="idade" required class="w-full mt-1 p-2 rounded-lg bg-gray-100 text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium">Gênero:</label>
+                <div class="flex items-center gap-4 mt-1">
+                    <label class="flex items-center">
+                        <input type="radio" name="genero" id="masculino" value="Masculino" required class="text-blue-500 focus:ring-blue-500">
+                        <span class="ml-2">Masculino</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="genero" id="feminino" value="Feminino" class="text-blue-500 focus:ring-blue-500">
+                        <span class="ml-2">Feminino</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="genero" id="outro" value="Outro" class="text-blue-500 focus:ring-blue-500">
+                        <span class="ml-2">Outro</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label for="evento" class="block text-sm font-medium">Evento que deseja participar:</label>
+                <select name="evento" id="evento" required class="w-full mt-1 p-2 rounded-lg bg-gray-100 text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="">Selecione...</option>
+                    <option value="Evento A">Evento A</option>
+                    <option value="Evento B">Evento B</option>
+                    <option value="Evento C">Evento C</option>
+                </select>
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" name="aceitoRegulamento" id="aceitoRegulamento" required class="text-blue-500 focus:ring-blue-500">
+                <label for="aceitoRegulamento" class="ml-2 text-sm">Aceito o regulamento</label>
+            </div>
+            <button type="submit" class="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition text-white font-semibold shadow-md">
+                Cadastrar Participante
+            </button>
+        </form>
+        <div class="mt-8">
+            <h3 class="text-xl font-bold text-center">Lista de Participantes</h3>
+            <ul id="listaParticipantes" class="mt-4 space-y-2"></ul>
+        </div>
+    </div>
+    <script src="formCadastroUsuario.js"></script>
 </body>
 </html>

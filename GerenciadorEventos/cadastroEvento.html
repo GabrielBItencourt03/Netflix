@@ -1,39 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastre o Evento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Casdastre o Evento</h1>
-    <form id="formEvento">
-    <label for="nome">Nome do Evento:</label>
-    <input type="text" name="nome" id="nome" required>
-    <br>
-    <label for="data">Data do Evento:</label>
-    <input type="date" name="data" id="data" required>
-    <br>
-    <label for="modalidade">Modalidade do Evento:</label>
-    <select name="modalidade" id="modalidade">
-        <option value="">Selecione...</option>
-        <option value="Futebol">Futebol</option>
-        <option value="Basquete">Basquete</option>
-        <option value="Vôlei">Vôlei</option>
-        <option value="Atletismo">Atletismo</option>
-        <option value="Outro">Outro</option>
-    </select>
-    <br>
-    <label form="local">Local do Evento:</label>
-    <input type="text" name="local" id="local" required>
-    <br>
-    <label for="eventoAberto">Evento aberto para público?</label>
-    <input type="checkbox" name="eventoAberto" id="eventoAberto">
-    <br>
-    <button type="submit">Cadastrar Evento</button>
-</form>
-    <h3>Eventos Cadastrados</h3>
-    <ul id="listaEventos"></ul>
+<body class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white min-h-screen flex items-center justify-center font-sans">
+    <div class="w-full max-w-lg p-8 bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-blur-md">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-extrabold uppercase tracking-widest">Cadastre o Evento</h1>
+            <p class="text-sm text-gray-200 mt-2">Preencha o formulário para cadastrar um novo evento</p>
+        </div>
+        <form id="formEvento" class="space-y-4">
+            <div>
+                <label for="nome" class="block text-sm font-medium">Nome do Evento:</label>
+                <input type="text" name="nome" id="nome" required class="w-full mt-1 p-2 rounded-lg bg-gray-100 text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label for="data" class="block text-sm font-medium">Data do Evento:</label>
+                <input type="date" name="data" id="data" required class="w-full mt-1 p-2 rounded-lg bg-gray-100 text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label for="modalidade" class="block text-sm font-medium">Modalidade do Evento:</label>
+                <select name="modalidade" id="modalidade" required class="w-full mt-1 p-2 rounded-lg bg-gray-100 text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="">Selecione...</option>
+                    <option value="Futebol">Futebol</option>
+                    <option value="Basquete">Basquete</option>
+                    <option value="Vôlei">Vôlei</option>
+                    <option value="Atletismo">Atletismo</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+            <div>
+                <label for="local" class="block text-sm font-medium">Local do Evento:</label>
+                <input type="text" name="local" id="local" required class="w-full mt-1 p-2 rounded-lg bg-gray-100 text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" name="eventoAberto" id="eventoAberto" class="text-blue-500 focus:ring-blue-500">
+                <label for="eventoAberto" class="ml-2 text-sm">Evento aberto para público?</label>
+            </div>
+            <button type="submit" class="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition text-white font-semibold shadow-md">
+                Cadastrar Evento
+            </button>
+        </form>
+        <div class="mt-8">
+            <h3 class="text-xl font-bold text-center">Eventos Cadastrados</h3>
+            <ul id="listaEventos" class="mt-4 space-y-2"></ul>
+        </div>
+    </div>
     <script src="formCadastroEvento.js"></script>
 </body>
 </html>
