@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Expresso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <form id="formProduto">
+        <label for="nomeProduto">Nome do Produto:</label>
+        <select id="nomeProduto" name="nomeProduto" required>
+            <option value="">Selecione um produto...</option>
+            
+            <!-- Cafés -->
+            <optgroup label="Cafés">
+                <option value="Café Expresso">Café Expresso - R$ 5,00 - 2 minutos</option>
+                <option value="Cappuccino">Cappuccino - R$ 8,00 - 5 minutos</option>
+                <option value="Latte">Latte - R$ 7,50 - 4 minutos</option>
+                <option value="Mocha">Mocha - R$ 9,00 - 6 minutos</option>
+                <option value="Macchiato">Macchiato - R$ 6,50 - 3 minutos</option>
+            </optgroup>
+
+            <!-- Bebidas -->
+            <optgroup label="Bebidas">
+                <option value="Suco de Laranja">Suco de Laranja - R$ 6,00 - 3 minutos</option>
+                <option value="Chá Gelado">Chá Gelado - R$ 5,50 - 2 minutos</option>
+                <option value="Refrigerante">Refrigerante - R$ 4,00 - 1 minuto</option>
+                <option value="Água com Gás">Água com Gás - R$ 3,50 - 1 minuto</option>
+            </optgroup>
+
+            <!-- Comidas -->
+            <optgroup label="Comidas">
+                <option value="Pão de Queijo">Pão de Queijo - R$ 3,00 - 5 minutos</option>
+                <option value="Croissant">Croissant - R$ 7,00 - 7 minutos</option>
+                <option value="Sanduíche Natural">Sanduíche Natural - R$ 10,00 - 8 minutos</option>
+                <option value="Torrada com Manteiga">Torrada com Manteiga - R$ 4,50 - 3 minutos</option>
+            </optgroup>
+
+            <!-- Sobremesas -->
+            <optgroup label="Sobremesas">
+                <option value="Bolo de Chocolate">Bolo de Chocolate - R$ 6,00 - 4 minutos</option>
+                <option value="Torta de Limão">Torta de Limão - R$ 7,50 - 5 minutos</option>
+                <option value="Pudim">Pudim - R$ 5,00 - 3 minutos</option>
+                <option value="Sorvete">Sorvete - R$ 8,00 - 2 minutos</option>
+            </optgroup>
+        </select>
+        <br><br>
+
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria" required>
+            <option value="">Selecione...</option>
+            <option value="Café">Café</option>
+            <option value="Bebida">Bebida</option>
+            <option value="Comida">Comida</option>
+            <option value="Sobremesa">Sobremesa</option>
+        </select>
+        <br><br>
+
+        <label for="preco">Preço:</label>
+        <span id="preco"></span>
+        <br><br>
+
+        <label for="tempoPreparo">Tempo de Preparo:</label>
+        <span id="tempoPreparo"></span>
+        <br><br>
+
+        <label for="descricao">Café Expresso, o amante dos apaixonados por Café</label>
+        <br><br>
+
+        <label>Disponível para delivery?</label>
+        <br>
+        <input type="radio" id="deliverySim" name="disponivelDelivery" value="Sim" required>
+        <label for="deliverySim">Sim</label>
+        <input type="radio" id="deliveryNao" name="disponivelDelivery" value="Não" required>
+        <label for="deliveryNao">Não</label>
+        <br><br>
+
+      
+        <button type="submit">Cadastrar Produto</button>
+    </form>
+    <script src="cardapioProdutos.js"></script>
+</body>
+</html>

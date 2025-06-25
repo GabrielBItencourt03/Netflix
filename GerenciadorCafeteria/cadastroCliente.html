@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+    <form id="formCadastroCliente">
+        <!-- Nome completo -->
+        <label for="nomeCompleto">Nome completo:</label>
+        <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+        <br><br>
+
+        <!-- E-mail -->
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Telefone -->
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+        <br><br>
+
+        <!-- Data de nascimento -->
+        <label for="dataNascimento">Data de nascimento:</label>
+        <input type="date" id="dataNascimento" name="dataNascimento" required>
+        <br><br>
+
+        <!-- Nível de fidelidade -->
+        <label>Nível de fidelidade:</label>
+        <br>
+        <input type="radio" id="bronze" name="nivelFidelidade" value="Bronze" required>
+        <label for="bronze">Bronze</label>
+        <br>
+        <input type="radio" id="prata" name="nivelFidelidade" value="Prata" required>
+        <label for="prata">Prata</label>
+        <br>
+        <input type="radio" id="ouro" name="nivelFidelidade" value="Ouro" required>
+        <label for="ouro">Ouro</label>
+        <br><br>
+
+        <!-- Promoções por e-mail -->
+        <label for="promocoesEmail">
+            <input type="checkbox" id="promocoesEmail" name="promocoesEmail">
+            Deseja receber promoções por e-mail?
+        </label>
+        <br><br>
+
+        <!-- Tipos de café preferidos -->
+        <label>Selecione seus tipos de café preferidos:</label>
+        <br>
+        <input type="checkbox" id="expresso" name="tiposCafe" value="Expresso">
+        <label for="expresso">Expresso</label>
+        <br>
+        <input type="checkbox" id="cappuccino" name="tiposCafe" value="Cappuccino">
+        <label for="cappuccino">Cappuccino</label>
+        <br>
+        <input type="checkbox" id="latte" name="tiposCafe" value="Latte">
+        <label for="latte">Latte</label>
+        <br>
+        <input type="checkbox" id="mocha" name="tiposCafe" value="Mocha">
+        <label for="mocha">Mocha</label>
+        <br>
+        <input type="checkbox" id="americano" name="tiposCafe" value="Americano">
+        <label for="americano">Americano</label>
+        <br>
+        <input type="checkbox" id="outro" name="tiposCafe" value="Outro">
+        <label for="outro">Outro</label>
+        <br><br>
+
+        <!-- Botão de envio -->
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
